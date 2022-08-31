@@ -1,0 +1,21 @@
+name: Checkmarx AST Scan
+on:
+  push:
+    branches:
+      - main
+      - master
+      - dev
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkmarx AST CLI Action
+        uses: checkmarx/ast-github-action@main #Github Action version
+        with:
+          project_name: antivirus
+          cx_tenant: tylertech
+          base_uri: https://ast.checkmarx.net
+          cx_client_id: CxGit
+          cx_client_secret: 53e02620-2eea-4db3-b8b6-16673e5a5ca2
