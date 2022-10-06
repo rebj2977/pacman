@@ -10,7 +10,7 @@ from util import manhattanDistance
 from game import Directions
 import random, util
 
-from game import Agent
+from game import Agentqwe
 
 class ReflexAgent(Agent):
   """
